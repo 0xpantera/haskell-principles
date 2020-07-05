@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 930bf5c3a699e725c51e812a417a40bd87dda6cc9baa9c34858884e027f9d0c7
+-- hash: a3f3a5a3d5d4d6ad463c3ffea6af8fb75cfc46eca32e0eb5c084706d87c4ad1b
 
 name:           haskell-principles
 version:        0.1.0.0
@@ -27,10 +27,12 @@ source-repository head
 
 library
   exposed-modules:
+      FoldableExamples.FoldableInstances
       Lib
       MonadExamples.EitherMonad
       MonadExamples.Exercises
       MonadExamples.MaybeMonad
+      MonadExamples.MonadComp
   other-modules:
       Paths_haskell_principles
   hs-source-dirs:

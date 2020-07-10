@@ -54,3 +54,9 @@ liftA2' :: Applicative f =>
            (a -> b -> c)
         -> f a -> f b -> f c
 liftA2' f g h = f <$> g <*> h
+
+getDogRM :: Person -> Dog
+getDogRM = do
+    name <- dogName
+    addy <- address
+    return $ Dog name addy

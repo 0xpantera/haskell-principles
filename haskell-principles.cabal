@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5d96887cf7c044328f305168944e99d89bc45065257db43849417f82e8c4e3b0
+-- hash: bcdd14040df1ee0cfa5f571a569293a2ead52e90b072c1999284ab1900379c2c
 
 name:           haskell-principles
 version:        0.1.0.0
@@ -36,6 +36,10 @@ library
       MonadExamples.Exercises
       MonadExamples.MaybeMonad
       MonadExamples.MonadComp
+      ReaderExamples.Bip
+      ReaderExamples.FunctionApp
+      ReaderExamples.FunctionMonad
+      ReaderExamples.WarmUp
       TraversableExamples.HttpStuff
   other-modules:
       Paths_haskell_principles

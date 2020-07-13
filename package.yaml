@@ -25,6 +25,9 @@ dependencies:
 - bytestring
 - text
 - mtl
+- random
+- transformers
+- dlist
 
 library:
   source-dirs: src

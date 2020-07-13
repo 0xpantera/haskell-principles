@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: bcdd14040df1ee0cfa5f571a569293a2ead52e90b072c1999284ab1900379c2c
+-- hash: f0ca93dd49c90cc07d6a6cb3d8dd2ea25101bb587f0d02b780862559c9252150
 
 name:           haskell-principles
 version:        0.1.0.0
@@ -39,7 +39,12 @@ library
       ReaderExamples.Bip
       ReaderExamples.FunctionApp
       ReaderExamples.FunctionMonad
+      ReaderExamples.PrettyReader
       ReaderExamples.WarmUp
+      StateExamples.FizzBuzz
+      StateExamples.RandomExample
+      StateExamples.RandomExample2
+      StateExamples.StateImpl
       TraversableExamples.HttpStuff
   other-modules:
       Paths_haskell_principles
@@ -48,8 +53,11 @@ library
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , dlist
     , mtl
+    , random
     , text
+    , transformers
     , wreq
   default-language: Haskell2010
 
@@ -63,9 +71,12 @@ executable haskell-principles-exe
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , dlist
     , haskell-principles
     , mtl
+    , random
     , text
+    , transformers
     , wreq
   default-language: Haskell2010
 
@@ -80,8 +91,11 @@ test-suite haskell-principles-test
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , dlist
     , haskell-principles
     , mtl
+    , random
     , text
+    , transformers
     , wreq
   default-language: Haskell2010

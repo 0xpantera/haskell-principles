@@ -25,6 +25,12 @@ dependencies:
 - bytestring
 - text
 - mtl
+- random
+- transformers
+- dlist
+- trifecta
+- raw-strings-qq
+- aeson
 
 library:
   source-dirs: src

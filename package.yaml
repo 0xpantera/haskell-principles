@@ -28,6 +28,9 @@ dependencies:
 - random
 - transformers
 - dlist
+- trifecta
+- raw-strings-qq
+- aeson
 
 library:
   source-dirs: src

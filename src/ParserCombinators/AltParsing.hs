@@ -13,9 +13,12 @@ b = "123"
 c = "123blah789"
 
 parseNos :: Parser NumberOrString
-parseNos =
-      (Left <$> integer)
-  <|> (Right <$> some letter)
+parseNos = do
+    skipMany (oneOf "\n")
+    v <-     (Left <$> integer)
+         <|> (Right <$> some letter)
+    skipMany (oneOf "\n")
+    return v
 
 eitherOr :: String
 eitherOr = [r|
@@ -25,16 +28,8 @@ abc
 def
 |]
 
+main :: IO ()
 main = do
-    let p f i =
-         parseString f mempty i
-
-    print $ p (some letter) a
-    print $ p integer b
-
-    print $ p parseNos a
-    print $ p parseNos b
-
-    print $ p (many parseNos) c
-    print $ p (some parseNos) c
+    let p f i = parseString f mempty i
+    print $ p (some parseNos) eitherOr
 

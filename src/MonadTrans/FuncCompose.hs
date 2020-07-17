@@ -3,15 +3,9 @@ module MonadTrans.FuncCompose where
 
 import Control.Applicative
 
-newtype Identity a =
-    Identity { runIdentity :: a }
-
 newtype Compose f g a =
     Compose { getCompose :: f (g a) }
     deriving (Eq, Show)
-
-instance Functor Identity where
-    fmap f (Identity a) = Identity (f a)
 
 instance (Functor f, Functor g) =>
          Functor (Compose f g) where
@@ -55,3 +49,14 @@ instance (Applicative f, Applicative g) =>
            -> Compose f g c
     liftA2 f (Compose fga) (Compose fgb) = 
         Compose $ (liftA2 . liftA2) f fga fgb
+
+instance (Foldable f, Foldable g) =>
+          Foldable (Compose f g) where
+    foldMap f (Compose fga) =  
+        (foldMap . foldMap) f fga
+
+instance (Traversable f, Traversable g) =>
+          Traversable (Compose f g) where
+    traverse f (Compose fga) = 
+        Compose <$> (traverse . traverse) f fga
+

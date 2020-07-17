@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a75d34059c7362c25ffd8edab6e832a8eadc38cdb5ee02868ffef5110d2d4f97
+-- hash: 2036fb8c13aacdeddfb5186875c53ac0201b73bb7d9877a03f599c781863611b
 
 name:           haskell-principles
 version:        0.1.0.0
@@ -37,6 +37,7 @@ library
       MonadExamples.MaybeMonad
       MonadExamples.MonadComp
       MonadTrans.FuncCompose
+      MonadTrans.IdentityT
       ParserCombinators.AltParsing
       ParserCombinators.Fractions
       ParserCombinators.LearnParsers

@@ -32,6 +32,7 @@ dependencies:
 - raw-strings-qq
 - aeson
 - scotty
+- extra
 
 library:
   source-dirs: src

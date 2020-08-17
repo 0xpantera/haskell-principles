@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 9ec3f24f21c635eb444aa5c5084948006ef85ae8d85339d84372c23a9261a4d5
+-- hash: f1d0c0a948d10fcacbe409eb86c28d5689765e7ca3a98ec6189d4ad60a18daa5
 
 name:           haskell-principles
 version:        0.1.0.0
@@ -28,14 +28,18 @@ source-repository head
 library
   exposed-modules:
       FoldableExamples.FoldableInstances
+      InDepth.DCountZeros
+      InDepth.DFileCounter
       InDepth.DiceGame
       InDepth.DIORef
       InDepth.DMaybe
       InDepth.DReader
+      InDepth.DStref
       InDepth.DSumList
       InDepth.DWeapon
       InDepth.Gcd
       InDepth.GenSQL
+      InDepth.Rpn.EvalRPN
       Lib
       MonadExamples.DepthMaybe
       MonadExamples.DepthReader
